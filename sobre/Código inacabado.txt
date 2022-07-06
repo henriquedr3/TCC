@@ -1,0 +1,106 @@
+<!--Início do Carrossel-->
+ <div class="bunch">
+   <div class="grapes">
+      <!--Radio Buttons-->
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <!--Fim radio buttons-->
+
+      <!--imagens do slide-->
+      <div class="grape firts">
+         <img src="imagem1.png" alt="imagem1">
+      </div>
+      <div class="grape">
+         <img src="imagem2.png" alt="imagem2">
+      </div>
+      <div class="grape">
+         <img src="imagem3.png" alt="imagem3">
+      </div>
+      <div class="grape">
+         <img src="Imagem4.webp" alt="imagem4">
+      </div>
+      <!--Fim imagens do slide-->
+
+      <!--Navegation auto-->
+      <div class="wine-auto">
+         <div class="auto-btn1"></div>
+         <div class="auto-btn2"></div>
+         <div class="auto-btn3"></div>
+         <div class="auto-btn4"></div>
+      </div>
+
+   </div>
+
+   <div class="manual-wine">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+   </div>
+
+ </div>
+ <!--Fim do carrossel-->
+
+CSS:-------------------------------------------------------------------------------------------------------------------------------
+
+/*Carrossel*/
+.bunch {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.grapes{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.grapes input{
+    display: none;
+}
+
+.grape{
+    width: 25%;
+    position: relative;
+}
+
+.grape img{
+    width: 800px;
+    height: 400px;
+}
+
+.manual-wine{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #333;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~.first{
+    margin-left: 0;
+}
+
+#radio2:checked ~.first{
+    margin-left: -50%;
+}

@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css2?family=Goldman&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Mitr&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Syncopate&display=swap);
+
+:root {
+    --color-white: rgb(224, 224, 224);
+    --color-white2: rgba(224, 224, 224, 0.719);
+    --color-white3: rgb(202, 202, 202);
+    --color-dark: #242424;
+    --color-dark1: #2c2c2c;
+    --color-dark2: #313131;
+    --color-blue: #6B6FE8;
+    --color-lightblue: #6bd3e8;
+    --color-green: #5EE898;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #303433;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.side {
+    background: url(./images/bk.png) no-repeat;
+    background-size: 100% 102%;
+}
+
+.side img {
+    width: 50%;
+    max-width: 50%;
+}
+
+.login-container {
+    max-width: 450px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Goldman';
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.separator {
+    width: 150px;
+    height: 4px;
+    background-color: var(--color-blue);
+    margin: 24px;
+}
+
+.welcome-message {
+    font-family: 'Mitr';
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #696969;
+}
+
+.login-form {
+    font-family: 'Mitr';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+}
+
+input {
+    width: 100%;
+    background: #e6e6e6;
+    color: #333;
+    letter-spacing: 0.5px;
+    padding: 14px 64px;
+}
+
+input ~ i {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    transition: color   0.4s;
+}
+
+input:focus ~ i {
+    color: var(--color-blue);
+}
+
+button.submit {
+    font-family: 'Mitr';
+    color: #fff;
+    padding: 14px 64px;
+    margin: 32px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, var(--color-green), var(--color-blue));
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+button.submit:hover {
+    opacity: 0.9;
+}
+
+/* ----  Responsiveness   ----  */
+@media (max-width: 780px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side {
+        display: none;
+    }
+}
